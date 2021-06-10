@@ -55,13 +55,14 @@ class TemplateFactory {
     return Object.values(this._config.content).map(this._resolvePossibleFunction).filter(Boolean)
   }
 
-  changeContent(content) {
-    this._config.content = content
-    return this
-  }
-
   hasContent() {
     return this.getContent().length > 0
+  }
+
+  changeContent(content) {
+    this._checkContent(content)
+    this._config.content = content
+    return this
   }
 
   toHtml() {
@@ -90,11 +91,15 @@ class TemplateFactory {
 
     typeCheckConfig(NAME, config, DefaultType)
 
-    for (const [selector, content] of Object.entries(config.content)) {
-      typeCheckConfig(NAME, { selector, entry: content }, DefaultContentType)
-    }
+    this._checkContent(config.content)
 
     return config
+  }
+
+  _checkContent(arg) {
+    for (const [selector, content] of Object.entries(arg)) {
+      typeCheckConfig(NAME, { selector, entry: content }, DefaultContentType)
+    }
   }
 
   _setContent(template, content, selector) {
