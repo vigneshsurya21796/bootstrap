@@ -54,9 +54,11 @@
     }
 
     // Prevent breaking of code
+    /* stylelint-disable */
     td:first-child > code {
       white-space: nowrap;
     }
+    /* stylelint-enable */
   }
 }
 
