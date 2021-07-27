@@ -221,10 +221,12 @@ or on a button **outside the alert** using the `data-bs-target` as demonstrated 
 ### Methods
 
 You can create an alert instance with the alert constructor, for example:
+
 ```js
 var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
 ```
+
 This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
 
 {{< bs-table >}}
