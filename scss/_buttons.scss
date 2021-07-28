@@ -3,8 +3,8 @@
 //
 
 .btn {
+  // scss-docs-start btn-css-vars
   --#{$variable-prefix}btn-padding: #{$btn-padding-y} #{$btn-padding-x};
-  // --#{$variable-prefix}btn-padding-y: #{$btn-padding-y};
   --#{$variable-prefix}btn-font-family: #{$btn-font-family};
   --#{$variable-prefix}btn-font-size: #{$btn-font-size};
   --#{$variable-prefix}btn-font-weight: #{$btn-font-weight};
@@ -16,6 +16,7 @@
   --#{$variable-prefix}btn-radius: #{$btn-border-radius};
   --#{$variable-prefix}btn-shadow: #{$btn-box-shadow};
   --#{$variable-prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  // scss-docs-end btn-css-vars
 
   display: inline-block;
   padding: var(--#{$variable-prefix}btn-padding);

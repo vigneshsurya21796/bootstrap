@@ -234,13 +234,21 @@ buttons.forEach(function (button) {
 })
 ```
 
-## Sass
+## CSS
 
 ### Variables
 
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.2.0</small>
+
+As part of Bootstrap's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
+
+### Sass variables
+
 {{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Sass mixins
 
 There are three mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin.
 
@@ -250,7 +258,7 @@ There are three mixins for buttons: button and button outline variant mixins (bo
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
-### Loops
+### Sass loops
 
 Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
 
