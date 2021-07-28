@@ -122,22 +122,21 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
-  color: $btn-link-color;
+  --#{$variable-prefix}btn-font-weight: #{$font-weight-normal};
+  --#{$variable-prefix}btn-color: #{$btn-link-color};
+  --#{$variable-prefix}btn-bg: transparent;
+  --#{$variable-prefix}btn-border-color: transparent;
+  --#{$variable-prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$variable-prefix}btn-hover-border-color: transparent;
+  --#{$variable-prefix}btn-active-border-color: transparent;
+  --#{$variable-prefix}btn-disabled-color: #{$btn-link-disabled-color};
+  --#{$variable-prefix}btn-disabled-border-color: transparent;
+
   text-decoration: $link-decoration;
 
-  &:hover {
-    color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-
+  &:hover,
   &:focus {
     text-decoration: $link-hover-decoration;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
   }
 
   // No need for an active state here

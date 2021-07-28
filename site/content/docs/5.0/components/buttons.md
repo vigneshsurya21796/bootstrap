@@ -86,8 +86,10 @@ You can even roll your own custom sizing with CSS variables:
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary" disabled>Button</button>
+<button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-outline-secondary" disabled>Button</button>
 {{< /example >}}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -97,8 +99,8 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 
 {{< example >}}
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+<a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
 
 {{< callout warning >}}

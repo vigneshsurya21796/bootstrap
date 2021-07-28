@@ -43,44 +43,16 @@
   $active-border: $color,
   $active-color: color-contrast($active-background)
 ) {
-  color: $color;
-  border-color: $color;
-
-  &:hover {
-    color: $color-hover;
-    background-color: $active-background;
-    border-color: $active-border;
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
-  &.dropdown-toggle.show {
-    color: $active-color;
-    background-color: $active-background;
-    border-color: $active-border;
-
-    &:focus {
-      @if $enable-shadows {
-        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
-      } @else {
-        // Avoid using mixin so we can pass custom focus shadow properly
-        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-      }
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $color;
-    background-color: transparent;
-  }
+  --#{$variable-prefix}btn-color: #{$color};
+  --#{$variable-prefix}btn-border-color: #{$color};
+  --#{$variable-prefix}btn-hover-color: #{$color-hover};
+  --#{$variable-prefix}btn-hover-bg: #{$active-background};
+  --#{$variable-prefix}btn-hover-border-color: #{$active-border};
+  --#{$variable-prefix}btn-active-color: #{$active-color};
+  --#{$variable-prefix}btn-active-bg: #{$active-background};
+  --#{$variable-prefix}btn-active-border-color: #{$active-border};
+  --#{$variable-prefix}btn-disabled-color: #{$color};
+  --#{$variable-prefix}btn-disabled-bg: transparent;
 }
 // scss-docs-end btn-outline-variant-mixin
 
@@ -90,10 +62,5 @@
   --#{$variable-prefix}btn-padding-y: #{$padding-y};
   --#{$variable-prefix}btn-font-size: #{$font-size};
   --#{$variable-prefix}btn-radius: #{$border-radius};
-
-  // padding: var(--#{$variable-prefix}btn-padding-y) var(--#{$variable-prefix}btn-padding-x);
-  // @include font-size(var(--#{$variable-prefix}btn-font-size));
-  // // Manually declare to provide an override to the browser default
-  // @include border-radius(var(--#{$variable-prefix}btn-border-radius), 0);
 }
 // scss-docs-end btn-size-mixin
