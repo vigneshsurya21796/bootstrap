@@ -30,8 +30,6 @@
   --#{$variable-prefix}btn-disabled-color: #{$disabled-color};
   --#{$variable-prefix}btn-disabled-bg: #{$disabled-background};
   --#{$variable-prefix}btn-disabled-border-color: #{$disabled-border};
-
-  // @include gradient-bg($background);
 }
 // scss-docs-end btn-variant-mixin
 
@@ -53,6 +51,7 @@
   --#{$variable-prefix}btn-active-border-color: #{$active-border};
   --#{$variable-prefix}btn-disabled-color: #{$color};
   --#{$variable-prefix}btn-disabled-bg: transparent;
+  --#{$variable-prefix}gradient: none;
 }
 // scss-docs-end btn-outline-variant-mixin
 

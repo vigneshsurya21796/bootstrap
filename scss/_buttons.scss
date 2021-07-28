@@ -31,11 +31,9 @@
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
-  background-color: var(--#{$variable-prefix}btn-bg);
   border: var(--#{$variable-prefix}btn-border-width) solid var(--#{$variable-prefix}btn-border-color);
-  border-radius: var(--#{$variable-prefix}btn-radius); // stylelint-disable-line property-disallowed-list
-  // @include border-radius(var(--#{$variable-prefix}btn-border-radius));
-  // @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  border-radius: if($enable-rounded, var(--#{$variable-prefix}btn-radius), null); // stylelint-disable-line property-disallowed-list
+  @include gradient-bg(var(--#{$variable-prefix}btn-bg));
   @include box-shadow(var(--#{$variable-prefix}btn-shadow));
   @include transition($btn-transition);
 
