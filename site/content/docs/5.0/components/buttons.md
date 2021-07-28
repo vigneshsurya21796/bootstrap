@@ -72,6 +72,15 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {{< /example >}}
 
+You can even roll your own custom sizing with CSS variables:
+
+{{< example >}}
+<button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-x: .5rem; --bs-btn-padding-y: .125rem; --bs-btn-font-size: .75rem;">
+  Custom button
+</button>
+{{< /example >}}
+
 ## Disabled state
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
