@@ -23,6 +23,14 @@
       })
     })
 
+  document.querySelectorAll('.custom-tooltip-demo')
+    .forEach(function (tooltip) {
+      new bootstrap.Tooltip(tooltip, {
+        selector: '[data-bs-toggle="tooltip"]',
+        customClass: 'custom-tooltip'
+      })
+    })
+
   document.querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(function (popover) {
       new bootstrap.Popover(popover)

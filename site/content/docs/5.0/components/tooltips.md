@@ -50,6 +50,15 @@ Hover over the links below to see tooltips:
   </p>
 </div>
 
+<div class="bd-example custom-tooltip-demo" id="tooltipThemes">
+  <style>
+    .custom-tooltip {
+      --bs-tooltip-bg: var(--bs-primary);
+    }
+  </style>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#tooltipThemes" title="Tooltip on top">Tooltip on top</button>
+</div>
+
 Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL.
 
 <div class="bd-example tooltip-demo">
