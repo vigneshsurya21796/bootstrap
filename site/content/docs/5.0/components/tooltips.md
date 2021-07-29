@@ -50,13 +50,10 @@ Hover over the links below to see tooltips:
   </p>
 </div>
 
+Customize the appearance of tooltips CSS variables. Use a combination of `container` and `customClass` as needed to scope changes to specific tooltips.
+
 <div class="bd-example custom-tooltip-demo" id="tooltipThemes">
-  <style>
-    .custom-tooltip {
-      --bs-tooltip-bg: var(--bs-primary);
-    }
-  </style>
-  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#tooltipThemes" title="Tooltip on top">Tooltip on top</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#tooltipThemes" title="This top tooltip is themed via CSS vars">Custom tooltip</button>
 </div>
 
 Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL.
