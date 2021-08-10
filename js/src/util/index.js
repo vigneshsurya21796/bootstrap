@@ -215,7 +215,7 @@ const DOMContentLoadedCallbacks = []
 const onDOMContentLoaded = callback => {
   if (document.readyState === 'loading') {
     // add listener on the first call when the document is in loading state
-    if (!DOMContentLoadedCallbacks.length) {
+    if (DOMContentLoadedCallbacks.length === 0) {
       document.addEventListener('DOMContentLoaded', () => {
         for (const callback of DOMContentLoadedCallbacks) {
           callback()

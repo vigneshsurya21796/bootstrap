@@ -49,7 +49,6 @@
       "error",
       "never"
     ],
-    "unicorn/explicit-length-check": "off",
     "unicorn/no-array-callback-reference": "off",
     "unicorn/no-array-method-this-argument": "off",
     "unicorn/no-null": "off",

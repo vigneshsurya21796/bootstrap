@@ -79,7 +79,7 @@ class Collapse extends BaseComponent {
       const filterElement = SelectorEngine.find(selector)
         .filter(foundElem => foundElem === this._element)
 
-      if (selector && filterElement.length) {
+      if (selector && filterElement.length > 0) {
         this._selector = selector
         this._triggerArray.push(elem)
       }
@@ -131,7 +131,7 @@ class Collapse extends BaseComponent {
     }
 
     const container = SelectorEngine.findOne(this._selector)
-    if (actives.length) {
+    if (actives.length > 0) {
       const tempActiveData = actives.find(elem => container !== elem)
       activesData = tempActiveData ? Collapse.getInstance(tempActiveData) : null
 
@@ -264,7 +264,7 @@ class Collapse extends BaseComponent {
   }
 
   _addAriaAndCollapsedClass(triggerArray, isOpen) {
-    if (!triggerArray.length) {
+    if (triggerArray.length === 0) {
       return
     }
 
