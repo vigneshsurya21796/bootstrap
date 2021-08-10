@@ -54,7 +54,6 @@
     "unicorn/no-array-callback-reference": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-array-method-this-argument": "off",
-    "unicorn/no-for-loop": "off",
     "unicorn/no-null": "off",
     "unicorn/no-unused-properties": "error",
     "unicorn/no-useless-undefined": "off",
