@@ -4,5 +4,9 @@
   ],
   "env": {
     "jasmine": true
+  },
+  "rules": {
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-useless-undefined": "off"
   }
 }
